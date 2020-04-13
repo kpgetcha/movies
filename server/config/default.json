@@ -1,0 +1,53 @@
+{
+  "Logger": {
+    "appenders": {
+      "console": {
+        "type": "console",
+        "layout": {
+          "type": "colored"
+        }
+      },
+      "file": {
+        "type": "file",
+        "filename": "log/server.log",
+        "maxLogSize": 10485760,
+        "backups": 3,
+        "encoding": "utf-8",
+        "pattern": ".yyyy-MM-dd-hh",
+        "compress": true,
+        "layout": {
+          "type": "basic"
+        }
+      }
+    },
+    "categories": {
+      "default": {
+        "appenders": ["console", "file"],
+        "level": "info",
+        "enableCallStack": true
+      }
+    }
+  },
+  "Swagger": {
+    "info": {
+      "title": "Node Swagger API",
+      "version": "1.0.0",
+      "description": "RESTful API service to search users, organizations and tickets"
+    },
+    "host": "localhost:3001",
+    "basePath": "/"
+  },
+  "LoaderType": "InMemory",
+  "LoggerType": "log4js",
+  "imdb": {
+    "baseURL": "https://api.themoviedb.org/3",
+    "timeout": 1000,
+    "headers": {
+      "Authorization": "Bearer "
+    }
+  },
+  "cache": {
+    "max": 500,
+    "maxAge": 360000
+  }
+}

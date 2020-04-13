@@ -1,0 +1,28 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "This project consist of an RESTful API services create using express.js and web app using React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-client": "cd client && sleep 5 && yarn start",
+    "start-server": "cd server && yarn start",
+    "start-all": "concurrently —kill-others-on-fail \"yarn start-client\" \"yarn start-server\""
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kpgetcha/tickets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kpgetcha/tickets/issues"
+  },
+  "homepage": "https://github.com/kpgetcha/tickets#readme",
+  "dependencies": {}
+}
